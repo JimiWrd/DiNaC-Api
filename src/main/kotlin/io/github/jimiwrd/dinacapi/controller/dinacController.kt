@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 class dinacController {
 
-    @GetMapping
-    fun doINeedACoat(): ResponseEntity<String> {
+    @GetMapping()
+    fun getDinacStatus(): ResponseEntity<String> {
         return ResponseEntity.ok("Success");
     }
 }

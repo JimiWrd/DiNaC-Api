@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service
 import org.springframework.web.client.RestTemplate
 import org.springframework.web.client.getForEntity
 import java.net.URI
+import java.time.LocalDate
 
 @Service
 class WeatherApiClientImpl @Autowired constructor(private val restTemplate: RestTemplate): WeatherApiClient {
@@ -25,7 +26,7 @@ class WeatherApiClientImpl @Autowired constructor(private val restTemplate: Rest
     }
 
     private fun buildURI(location: String): URI {
-        val uriString = "${baseURI}locations=${location}&aggregateHours=12&unitGroup=uk&contentType=json&key=${apiKey}"
+        val uriString = "${baseURI}/${location}/${LocalDate.now()}?unitGroup=uk&key=${apiKey}&include=days&elements=description,precip,tempmax,tempmin"
         return URI.create(uriString)
     }
 }

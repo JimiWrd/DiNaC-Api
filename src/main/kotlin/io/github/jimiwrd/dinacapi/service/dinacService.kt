@@ -1,5 +1,5 @@
 package io.github.jimiwrd.dinacapi.service
 
 interface dinacService {
-    fun doINeedACoat(): Boolean
+    fun doINeedACoat(location: String): Boolean
 }

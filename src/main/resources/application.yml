@@ -1,4 +1,8 @@
-WEATHER_API_KEY: tbc
+WEATHER_API_KEY: ${weatherApiKey}
 weather:
   api:
-    baseUrl: https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/weatherdata/forecast?
+    baseUrl: https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline
+
+server:
+  servlet:
+    context-path: /api

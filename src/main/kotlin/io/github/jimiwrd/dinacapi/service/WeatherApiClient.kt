@@ -1,7 +1,7 @@
 package io.github.jimiwrd.dinacapi.service
 
-import org.springframework.http.ResponseEntity
+import io.github.jimiwrd.dinacapi.model.WeatherResponseModel
 
 interface WeatherApiClient {
-    fun callToWeatherApi(location: String): ResponseEntity<String>
+    fun callToWeatherApi(location: String): WeatherResponseModel
 }

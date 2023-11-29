@@ -24,7 +24,7 @@ class DinacServiceUnitTests {
 
     @Test
     fun `should return true if min temp is less than 10`() {
-        Mockito.`when`(mockWeatherApiClient.callToWeatherApi("birmingham")).thenReturn(TestFixtures.generateCoatNeededMinTempDto())
+        Mockito.`when`(mockWeatherApiClient.callToWeatherApi("birmingham")).thenReturn(TestFixtures.generateCoatNeededMinTempModel())
         val serviceResponse = dinacService.doINeedACoat("birmingham")
         val isCoatNeeded = serviceResponse.isCoatNeeded
         isCoatNeeded.shouldBeTrue();
@@ -32,7 +32,7 @@ class DinacServiceUnitTests {
 
     @Test
     fun `should return true if precipitation is more than 0 point 4 mm`() {
-        Mockito.`when`(mockWeatherApiClient.callToWeatherApi("birmingham")).thenReturn(TestFixtures.generateCoatNeededRainDto())
+        Mockito.`when`(mockWeatherApiClient.callToWeatherApi("birmingham")).thenReturn(TestFixtures.generateCoatNeededRainModel())
         val serviceResponse = dinacService.doINeedACoat("birmingham")
         val isCoatNeeded = serviceResponse.isCoatNeeded
         isCoatNeeded.shouldBeTrue();
@@ -40,7 +40,7 @@ class DinacServiceUnitTests {
 
     @Test
     fun `should return false if min temp is greater than 10`() {
-        Mockito.`when`(mockWeatherApiClient.callToWeatherApi("birmingham")).thenReturn(TestFixtures.generateCoatNotNeededDto())
+        Mockito.`when`(mockWeatherApiClient.callToWeatherApi("birmingham")).thenReturn(TestFixtures.generateCoatNotNeededModel())
         val serviceResponse = dinacService.doINeedACoat("birmingham")
         val isCoatNeeded = serviceResponse.isCoatNeeded
         isCoatNeeded.shouldBeFalse();

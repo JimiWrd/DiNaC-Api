@@ -1,2 +1,2 @@
 # dinac-api
-Simple kotlin microservice that fetches weather data for a given or assumed location and returns yes or no to the simple question; 'Do I need a coat?'
+Simple kotlin microservice that fetches weather data for a given location and returns "True" or "False" to the simple question; 'Do I need a coat?'. The response also includes a short description of the weather.

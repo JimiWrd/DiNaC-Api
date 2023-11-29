@@ -4,7 +4,7 @@ import io.github.jimiwrd.dinacapi.model.WeatherResponseModel
 
 class TestFixtures {
     companion object {
-        fun generateCoatNeededMinTempDto(): WeatherResponseModel {
+        fun generateCoatNeededMinTempModel(): WeatherResponseModel {
             return WeatherResponseModel(
                 address = "birmingham",
                 latitude = 52.4789,
@@ -24,7 +24,7 @@ class TestFixtures {
             )
         }
 
-        fun generateCoatNeededRainDto(): WeatherResponseModel {
+        fun generateCoatNeededRainModel(): WeatherResponseModel {
             return WeatherResponseModel(
                 address = "birmingham",
                 latitude = 52.4789,
@@ -44,7 +44,7 @@ class TestFixtures {
             )
         }
 
-        fun generateCoatNotNeededDto(): WeatherResponseModel {
+        fun generateCoatNotNeededModel(): WeatherResponseModel {
             return WeatherResponseModel(
                 address = "birmingham",
                 latitude = 52.4789,
